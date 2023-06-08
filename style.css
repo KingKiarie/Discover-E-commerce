@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.head-wrap{
+.Head-wrap{
 
 }
 .wrap{
@@ -50,7 +50,7 @@
 
 .line{
     width: 100vw;
-    height: 0.5vh;
+    height: 0.2vh;
     background-color: black;
 }
 .dis-img{
@@ -58,6 +58,7 @@
     height: 100px;
 }
 .placeholder{
+    margin-top: 40px;
     width: 50vw;
     height: 5vh;
 }
@@ -68,4 +69,23 @@
 .account{
     width: 40px;
     height: 40px;
+}
+.account1{
+    margin-top: 35px;
+    width: 40px;
+    height: 40px;
+}
+
+.futa-wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.hidden{
+    display: none;
+}
+.Body-wrap{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(241,241,242);
 }
