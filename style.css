@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.head-wrap{
+
+}
+.wrap{
+    width: 100vw;
+    height: 10vh;
+    background-image: url(./images/black_wallpaper\ \(1\).jpg);
+    background-size: cover;
+}
+.wrap p{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.body-wrap{
+    width: 100vw;
+    height: 10vh;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.body-wrap p{
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.sell-img{
+    width: 40px;
+    height: 40px;
+}
+.credit-card{
+    width: 40px;
+    height: 40px;
+}
+.food-img{
+    width: 40px;
+    height: 40px;
+}
+.wrap2 img{
+    width: 40px;
+    height: 40px;
+}
+
+.line{
+    width: 100vw;
+    height: 0.5vh;
+    background-color: black;
+}
+.dis-img{
+    width: 200px;
+    height: 100px;
+}
+.placeholder{
+    width: 50vw;
+    height: 5vh;
+}
+.srch{
+    width: 10vw;
+    height: 5vh;
+}
+.account{
+    width: 40px;
+    height: 40px;
+}
