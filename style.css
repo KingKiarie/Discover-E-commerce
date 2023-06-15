@@ -108,13 +108,12 @@
     background-color: lightslategrey;
 }
 .description{
-    background-image: url(./images/pexels-fwstudio-129731.jpeg);
-    background-size: cover;
-    margin: 20px 150px 20px 150px;
+  
+    margin: 5px 150px 5px 150px;
     
 }
 .description p{
-    font-size: 22px;
+    font-size: 16px;
     font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .email{

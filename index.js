@@ -1,7 +1,10 @@
+alert('Please signin for better services')
 const products = document.querySelector('.products')
+
 const parent = document.querySelector('.parent-list')
 const form= document.querySelector('.form')
-const product=document.querySelector('.products')
+
+const cartNum = document.querySelector('.cartNum')
 let searchParam = 'phone'
 let cartItems = []
 
@@ -65,6 +68,19 @@ const searchProducts =async (products)=>{
         <p>Quantity: <input type="number" value="1"></p>
         <button class="cartbutton">Add to cart</button>
         `
+
+        const addButton = container.querySelector('.cartbutton')
+        addButton.addEventListener('click', ()=>{
+            const productObject = {
+                title: item.title,
+                price: item.price,
+                image: item.thumbnail,
+            }
+            cartItems.push(productObject)
+            console.log(cartItems)
+            localStorage.setItem('cartItems',JSON.stringify(cartItems))
+            cartNum.innerHTML = cartItems.length
+        })
         product.appendChild(container)
     })
 }
