@@ -88,22 +88,90 @@
     width: 100vw;
     height: 100vh;
     background-color: rgb(241,241,242);
+    display: flex;
+    justify-content: space-evenly;
+}
+.products img{
+    height: 300px;
+    width: 400px;
+}
+.products{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .dis{
     width: 80px;
     height: 40px;
 }
+.outer-des{
+    background-color: lightslategrey;
+}
 .description{
-    background-image: url(./images/wallpaperflare.com_wallpaper.jpg);
+    background-image: url(./images/pexels-fwstudio-129731.jpeg);
     background-size: cover;
+    margin: 20px 150px 20px 150px;
     
 }
 .description p{
     font-size: 22px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.email{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(39,43,51);
+}
+.placeholder{
+    width: 500px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.em{
+    display: flex;
+    flex-direction: column;
+}
+.em h3{
+    color: aliceblue;
+}
+.em p{
+    color: aliceblue;
+}
+.btn{
+    height: 50px;
+    width: 100px;
+    background-color: rosybrown;
 }
 .Footer-wrap{
-    background-color: rgb(39,43,51);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(83,83,87);
+   
+}
+.upper{
+    margin: 0px 50px 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.middle{
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 0 50px;
+}
+.mid-img{
+    height: 240px;
+    width: 100px;
+    
+
+}
+.lower{
+    margin: 50px 50px 200px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .dis2{
     align-items: center;

@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./images/pay.jpeg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup{
+    background-color: ;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 15px;
+    border: 1px solid rgb(238,174,76);
+}
+input{
+    align-items: center;
+    margin: 5px 40px;
+    height: 40px;
+    width: 300px;
+    padding: 5px;
+}
+button{
+    height: 35px;
+    width: 100px;
+    margin: 5px 0px;
+    background-color: skyblue;
+    border: none;
+    border-radius: 5px;
+    color: #333; 
+}
+button:hover{
+     background-color: #333;
+     color: skyblue;
+}
+.header p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    margin: 0 0 40px 0;
+}
+.head-img{
+    width: 150px;
+    height: 60px;
+}
