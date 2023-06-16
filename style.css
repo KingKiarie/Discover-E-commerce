@@ -8,7 +8,7 @@
 }
 .wrap{
     width: 100vw;
-    height: 10vh;
+    height: 15vh;
     background-image: url(./images/black_wallpaper\ \(1\).jpg);
     background-size: cover;
 }
@@ -64,7 +64,7 @@
 }
 .srch{
     width: 10vw;
-    height: 5vh;
+    height: 6vh;
 }
 .account{
     width: 40px;
@@ -92,8 +92,8 @@
     justify-content: space-evenly;
 }
 .products img{
-    height: 300px;
-    width: 400px;
+    height: 150px;
+    width: 300px;
 }
 .products{
     display: flex;
@@ -177,4 +177,7 @@
     width: 200px;
     height: 100px;
 
+}
+.sidebar p{
+    text-decoration: none;
 }

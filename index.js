@@ -1,7 +1,14 @@
-alert('Please signin for better services')
-const products = document.querySelector('.products')
+const username = localStorage.getItem('username')
+if (!username) {
+    alert('login to continue')
 
-const parent = document.querySelector('.parent-list')
+    setTimeout(() => {
+        window.location.href = '/accounts.html'
+    }, '2000');
+}
+const products = document.querySelector('.products')
+const product = document.querySelector('.products')
+
 const form= document.querySelector('.form')
 
 const cartNum = document.querySelector('.cartNum')
@@ -9,13 +16,7 @@ let searchParam = 'phone'
 let cartItems = []
 
 
- parent.addEventListener('click', function(event){
-
-    const sublist= event.target.querySelector('.sublist')
-    if(event.target.tagName === 'LI'){
-       sublist.classList.toggle('hidden')
-    }
-})
+ 
 
 // // const fetchData = async()=>{
 //     const response = await fetch('https://fakestoreapi.com/products')
@@ -85,4 +86,3 @@ const searchProducts =async (products)=>{
     })
 }
 
-fetchData()
