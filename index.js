@@ -6,38 +6,25 @@ if (!username) {
         window.location.href = '/accounts.html'
     }, '2000');
 }
-const products = document.querySelector('.products')
+// const products = document.querySelector('.products')
+
 const product = document.querySelector('.products')
-
 const form= document.querySelector('.form')
-
 const cartNum = document.querySelector('.cartNum')
-let searchParam = 'phone'
+
+const object = localStorage.getItem('cartItems')
+// const cartProducts=JSON.parse(objects)
+
+// if(cartProducts){
+//     cartNum.innerHTML=cartProducts.length
+// }
+
+let searchParam = ''
 let cartItems = []
 
 
  
 
-// // const fetchData = async()=>{
-//     const response = await fetch('https://fakestoreapi.com/products')
-//     const data = await response.json()
-//     console.log(data)
-
-//     data.forEach((product)=>{
-//         const container=document.createElement('div')
-//         container.classList.add('container')
-
-//         container.innerHTML=`
-//         <div><img class="cnt-img" src="${product.image}"</div>
-//         <h2>${product.title}</h2>
-//         <h3>${product.description}</h3>
-//         <h3>${product.category}</h3>
-//         <h3>${product.rating}</h3>
-//         <h3>${product.price}</h3>
-//         `
-//         document.body.appendChild(container)
-//     })
-// }
 
 form.addEventListener('submit', async (e)=>{
     e.preventDefault()
@@ -55,17 +42,54 @@ form.addEventListener('submit', async (e)=>{
 
 })
 
+const fetchProducts = async(products)=>{
+    const response = await fetch ('https://dummyjson.com/products/search?q=${products}')
+    const data = await response.json()
+    console.log(item)
+
+    data.products.forEach((product)=>{
+        
+        const container = document.createAttribute('div')
+        container.classList.add('containerProduct')
+        container.innerHTML=`
+        <div class="card" style="width: 18rem;">
+        <img src="${product.thumbnail}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">${product.title}</h5>
+          <p class="card-text">${product.price}</p>
+          <span>$</span>
+          <button class="cartbutton">Add to cart</button>
+        </div>
+      </div>
+        `
+        const addButton = container.querySelector('.cartbutton')
+        addButton.addEventListener('click',()=>{
+            const productObject = {
+                title: product.title,
+                price: product.price,
+                image: product.thumbnail,
+            }
+            cartItems.push(productObject)
+            localStorage.setItem("cart",JSON.stringify('cartItems'))
+            cartNum.innerHTML = cartItems.length
+        })
+        product.appendChild(container)
+    })
+}
+fetchProducts()
+
 const searchProducts =async (products)=>{
     const response= await fetch(`https://dummyjson.com/products/search?q=${products}`)
     const data = await response.json()
-    data.products.forEach((item)=>{
-        console.log(item)
+    data.products.forEach((product)=>{
+        console.log(product)
         const container = document.createElement('div')
         container.classList.add('containerProduct')
         container.innerHTML=`
-        <div class="product-image"><img src="${item.thumbnail}"/></div>
-        <h2>${item.title}</h2>
-        <h3>$. ${item.price}</h3>
+        <div class="product-image"><img src="${product.thumbnail}"/></div>
+        <h2>${product.title}</h2>
+        <h3>$. ${product.price}</h3>
+        <span>$</span>
         <p>Quantity: <input type="number" value="1"></p>
         <button class="cartbutton">Add to cart</button>
         `
@@ -73,9 +97,9 @@ const searchProducts =async (products)=>{
         const addButton = container.querySelector('.cartbutton')
         addButton.addEventListener('click', ()=>{
             const productObject = {
-                title: item.title,
-                price: item.price,
-                image: item.thumbnail,
+                title: product.title,
+                price: product.price,
+                image: product.thumbnail,
             }
             cartItems.push(productObject)
             console.log(cartItems)
@@ -85,4 +109,22 @@ const searchProducts =async (products)=>{
         product.appendChild(container)
     })
 }
+searchProducts()
+
+const revealBtn = document.querySelector('.revealBtn');
+const hiddenContent= document.querySelector('.hiddenContent');
+
+function revealContent(){
+    if(hiddenContent.classList.contains('revealBtn'))
+    {
+        hiddenContent.classList.remove('revealBtn')
+        revealBtn
+    }else{
+        hiddenContent.classList.add('revealBtn')
+    }
+}
+
+revealBtn.addEventListener('click', revealContent)
+
+
 

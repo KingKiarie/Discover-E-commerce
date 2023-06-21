@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .Head-wrap{
-
+    background-color: orange;
 }
 .wrap{
     width: 100vw;
@@ -13,14 +13,14 @@
     background-size: cover;
 }
 .wrap p{
-    color: white;
+    color: orange;
     text-align: center;
     font-size: 30px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
 .body-wrap{
-    width: 100vw;
+    
     height: 10vh;
     display:flex;
     justify-content: space-between;
@@ -81,15 +81,24 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.hidden{
-    display: none;
-}
 .Body-wrap{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(241,241,242);
+  
+    margin: 0px 100px 200px 100px;
     display: flex;
     justify-content: space-evenly;
+}
+.hiddenContent{
+    display: none;
+}
+
+.revealBtn{
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: block;
+    background-color: #ffa500;
+    width: 100vw;
 }
 .products img{
     height: 150px;
@@ -100,23 +109,32 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
 .dis{
     width: 80px;
     height: 40px;
 }
-.outer-des{
-    background-color: lightslategrey;
-}
 .description{
-  
-    margin: 5px 150px 5px 150px;
     
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;   
 }
+
 .description p{
     font-size: 16px;
     font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.boxes{
+    width: 100vw;
+    height: 40vh;
+    border-radius: 10px;
+    border: 2px solid black;
+}
 .email{
+    margin-top: 50px;
     display: flex;
     justify-content: space-evenly;
     background-color: rgb(39,43,51);
@@ -161,8 +179,8 @@
     margin: 50px 0 50px;
 }
 .mid-img{
-    height: 240px;
-    width: 100px;
+    height: 140px;
+    width: 80px;
     
 
 }
