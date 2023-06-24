@@ -1,63 +1,42 @@
-const data = localStorage.getItem('cardItems')
-const products = JSON.parse(data)
-
-const clear= document.querySelector('.clear')
-const results = document.querySelector('.results')
-const cartContainer = document.querySelector('.cartContainer')
 const container = document.querySelector('.container')
+const total = document.querySelector('.total')
 
-//updating items in the cart
 
-const finalProducts = products.filter((product,index,self)=>{
-    return index === screenLeft.findIndex((obj)=>obj.title === product.title)
-})
-const quantity= {}
-
-products.forEach((product)=>{
-    if(product.title in quantity){
-        quantity[product.title] +=1
-    }else{
-        quantity[product.title] = 1
-    }
-})
+const getItem = localStorage.getItem('cartItems');
+const product = JSON.parse(getItem);
 
 let sum = 0
 
-finalProducts.forEach((product,index)=>{
-    const productCard =document.createElement('div')
-    productCard.classList.add('productCard')
+product.forEach((name,index)=>{
+    const cartContainer = document.createElement('div')
+    cartContainer.classList.add('cartContainer')
 
-    sum += product.price
-    
-    productCard.innerHTML=`
-        <div class="prodImg">
-        <img src="${product.iamge}"/>
-        </div>
 
-        <div>
-        <h2>${product.title}</h2>
-            <div class="price"><span>$</span><p>${product.price}</p></div>
-            <dov> QTY: <span class="quantity">0</span></div>
-            <button class="delete">Delete</button>
-        </div>
-
+    cartContainer.innerHTML=`
+        <div><img class="img" src="${name.image}"/></div>
+        <h2>${name.title}</h2>
+        <h2>${name.price}</h2>
+        <button class="remove">Remove from cart</button>
+        
     `
+    sum += name.price
 
-    const quantityNum =productCard.querySelector('.quantity')
-    quantityNum.innerHTML=quantity[product.title]
-    results.innerHTML=`Total: $${sum}`
+total.innerHTML = `Total $${sum}`
 
-    const deleteButton = productCard.querySelector('.delete')
-    deleteButton.addEventListener('click', ()=>{
-        finalProducts.splice(index, 1)
-        localStorage.setItem('cartItems', JSON.stringify(products))
-        window.location.reload()
-})
-cartContainer.appendChild(productCard)
+container.appendChild(cartContainer)
+
+const remove = container.querySelector('.remove')
+
+remove.addEventListener('click',()=>{
+    product.splice(index,1)
+    localStorage.setItem('cartItem', JSON.stringify(product))
+    window.location.reload();
 })
 
-clear.addEventListener('click', ()=>{
-    products.splice(0, products.length)
-    localStorage.removeItem('cartItems')
-    window.location.reload()
 })
+
+
+
+
+
+

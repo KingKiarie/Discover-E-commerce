@@ -8,7 +8,7 @@ if (!username) {
 }
 // const products = document.querySelector('.products')
 
-const product = document.querySelector('.products')
+const productsContainer = document.querySelector('.products')
 const form= document.querySelector('.form')
 const cartNum = document.querySelector('.cartNum')
 
@@ -30,7 +30,7 @@ form.addEventListener('submit', async (e)=>{
     e.preventDefault()
     const input = form.querySelector('.placeholder')
     searchParam=input.value
-    product.innerHTML=''
+    productsContainer.innerHTML=''
     console.log(searchParam)
 
     try{
@@ -45,7 +45,6 @@ form.addEventListener('submit', async (e)=>{
 const fetchProducts = async(products)=>{
     const response = await fetch ('https://dummyjson.com/products/search?q=${products}')
     const data = await response.json()
-    console.log(item)
 
     data.products.forEach((product)=>{
         
@@ -70,10 +69,10 @@ const fetchProducts = async(products)=>{
                 image: product.thumbnail,
             }
             cartItems.push(productObject)
-            localStorage.setItem("cart",JSON.stringify('cartItems'))
+            localStorage.setItem("cartItems",JSON.stringify('cartItems'))
             cartNum.innerHTML = cartItems.length
         })
-        product.appendChild(container)
+        productsContainer.appendChild(container)
     })
 }
 fetchProducts()
@@ -104,12 +103,10 @@ const searchProducts =async (products)=>{
             cartItems.push(productObject)
             console.log(cartItems)
             localStorage.setItem('cartItems',JSON.stringify(cartItems))
-            cartNum.innerHTML = cartItems.length
         })
-        product.appendChild(container)
+        productsContainer.appendChild(container)
     })
 }
-searchProducts()
 
 const revealBtn = document.querySelector('.revealBtn');
 const hiddenContent= document.querySelector('.hiddenContent');
