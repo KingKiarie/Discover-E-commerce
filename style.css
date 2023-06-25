@@ -3,8 +3,63 @@
     padding: 0;
     box-sizing: border-box;
 }
+.open{
+    display: inline;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: right;
+
+}
+.landing{
+    background-image: url(./design1/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+/*animated css*/
+.cart-container {
+    margin: -300px 300px 0px 900px;
+    position: relative;
+    width: 300px;
+    height: 200px;
+  }
+  
+  #cart {
+    height: 200px;
+    width: 250px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 1s linear;
+  }
+  /*outro*/
+.outro{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+   
+}
+.outro p {
+    color: rgb(91,48,90);
+    font-size: 40px;
+    margin: -600px 300px 0px 900px;
+    font-family: font-family: 'Abril Fatface', cursive;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.outro h1{
+    color: rgb(91,48,90);
+    font-size: 30px;
+    font-family: font-family: 'Abril Fatface', cursive;
+    font-family: 'Bebas Neue', sans-serif;
+}
+    
 .Head-wrap{
-    background-color: orange;
+    background-color: rgb(228,151,86);
 }
 .wrap{
     width: 100vw;
@@ -13,7 +68,7 @@
     background-size: cover;
 }
 .wrap p{
-    color: orange;
+    color: rgb(228,151,86);
     text-align: center;
     font-size: 30px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -97,7 +152,7 @@
     font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: block;
-    background-color: #ffa500;
+    background-color: rgb(228,151,86);
     width: 100vw;
 }
 .products img{
@@ -105,6 +160,7 @@
     width: 300px;
 }
 .products{
+    width: 60vw;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;

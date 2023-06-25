@@ -1,3 +1,28 @@
+//animated shopping cart
+const cart = document.getElementById('cart');
+let cartPosition = 0;
+let isMovingRight = true;
+
+function moveCart() {
+  if (isMovingRight) {
+    cartPosition += 10;
+    if (cartPosition >= 300) {
+      isMovingRight = false;
+    }
+  } else {
+    cartPosition -= 10;
+    if (cartPosition <= 0) {
+      isMovingRight = true;
+    }
+  }
+  
+  cart.style.left = cartPosition + 'px';
+  
+  requestAnimationFrame(moveCart);
+}
+
+moveCart();
+//signup authentication prompt
 const username = localStorage.getItem('username')
 if (!username) {
     alert('login to continue')
