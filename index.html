@@ -10,25 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="open">
-        <div class="landing">
+        <div class="cart-container">
+            <img src="./svgs/shop-cart-svgrepo-com.svg" alt="Shopping Cart" id="cart" />
+            <h1>Shop! Find! Sell! Enjoy!</h1>
         </div>
-        <div>
-            <div class="outro">
-                <div>
-                    <p>
-                        We are here for you.<br>
-                         To deliver and to satisfy,<br>
-                          you are the reason we exist<br>
-                    </p>
-                </div>
-                <div class="cart-container">
-                    <img src="./svgs/shop-cart-svgrepo-com.svg" alt="Shopping Cart" id="cart" />
-                    <h1>Shop! Find! Sell! Enjoy!</h1>
-                  </div>
-        </div>
+          <p>
+            We are here for you.<br>
+             To deliver and to satisfy,<br>
+              you are the reason we exist<br>
+            </p>
     </div>
     </div>
     <div class="Head-wrap">
@@ -82,22 +77,40 @@
     
 
     <div class="Body-wrap">
-        
-        <div class="products">
-            <div class="side-advert">
-                
-            </div>
+        <div>
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://i.dummyjson.com/data/products/7/thumbnail.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://i.dummyjson.com/data/products/1/thumbnail.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://i.dummyjson.com/data/products/57/thumbnail.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </div>
+        <div class="products"></div>
     </div>
     
         <div class="description">
 
             <button class="revealBtn boxes">Reveal more
                 <div class="hiddenContent boxes">
-                    <p><img class="dis" src="./svgs/discover-svgrepo-com (2).svg" alt="discovery">Welcome to the top E-commerce site in Kenya. Here there are plenty of products in store ; from <a href="#">Mobile phones</a>,<a href="#">fashion and design</a>,<a href="#">food-Stuffs</a>,<a href="#">Furniture</a>, among many other categories in store<br>
-                    The discover site was founded in 2023 in pursuit to satisfy customers needs at a reasonable cost to suit the customers budget needs.<br>
-                    Be in the trend with new products and from top brands in Discover Kenya and make use of our latest offers to shop at the best price guarantee! Also take advantage of Technological products available to own laptops, printers and other storage devices such as hard drives at affordable prices. Discover remains among your top-most online marketplace for easy convenience and you get nothing but the best! You can now Sell online on discover to make more money with ease and convenience. List your products with zero fee charge and grow your business today! Discover gives you a lot of flexible options to make more money. Love reading? Browse through our books categories to order educational books for your kids and loved ones and get the best deal on small and large appliances for the home.</br>
-                    You can also Utilize our coupons and customer score points can be redeemed to purchase. There are also black friday offers where you can have higher goods at a drastic cheaper price; Let luck be on your side as you scroll the site pages ..... who knows you may find what you are looking for for just 10 Ksh.<br>
+                    <p><img class="dis" src="./svgs/discover-svgrepo-com (2).svg" alt="discovery">Welcome to the top E-commerce site in Kenya. Here there are plenty of products in store ; from <a href="#">Mobile phones</a>,<a href="#">fashion and design</a>,<a href="#">food-Stuffs</a>,<a href="#">Furniture</a>, among many other categories in store
+                    The discover site was founded in 2023 in pursuit to satisfy customers needs at a reasonable cost to suit the customers budget needs.
+                    Be in the trend with new products and from top brands in Discover Kenya and make use of our latest offers to shop at the best price guarantee! Also take advantage of Technological products available to own laptops, printers and other storage devices such as hard drives at affordable prices. Discover remains among your top-most online marketplace for easy convenience and you get nothing but the best! You can now Sell online on discover to make more money with ease and convenience. List your products with zero fee charge and grow your business today! Discover gives you a lot of flexible options to make more money. Love reading? Browse through our books categories to order educational books for your kids and loved ones and get the best deal on small and large appliances for the home.
+                    You can also Utilize our coupons and customer score points can be redeemed to purchase. There are also black friday offers where you can have higher goods at a drastic cheaper price; Let luck be on your side as you scroll the site pages ..... who knows you may find what you are looking for for just 10 Ksh.
                     Hurry up and start shopping, the grass is greener on this side do not miss out!</p>
                 </div>
             </button>

@@ -4,24 +4,19 @@
     box-sizing: border-box;
 }
 .open{
-    display: inline;
+    background-image: url(./design1/linkedin_banner_image_2.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: right;
 
 }
-.landing{
-    background-image: url(./design1/logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    display: inline-flex;
-    flex-wrap: wrap;
-}
+
 /*animated css*/
 .cart-container {
-    margin: -300px 300px 0px 900px;
     position: relative;
     width: 300px;
     height: 200px;
@@ -44,14 +39,17 @@
     flex-direction: column;
    
 }
-.outro p {
+.open{
+    background-image: url();
+}
+.open p {
     color: rgb(91,48,90);
     font-size: 40px;
     margin: -600px 300px 0px 900px;
     font-family: font-family: 'Abril Fatface', cursive;
     font-family: 'Bebas Neue', sans-serif;
 }
-.outro h1{
+.open h1{
     color: rgb(91,48,90);
     font-size: 30px;
     font-family: font-family: 'Abril Fatface', cursive;
@@ -59,8 +57,12 @@
 }
     
 .Head-wrap{
+    width: 100vw;
+    flex-wrap: wrap;
     background-color: rgb(228,151,86);
 }
+
+
 .wrap{
     width: 100vw;
     height: 15vh;
@@ -78,7 +80,8 @@
     
     height: 10vh;
     display:flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     
 }
@@ -99,7 +102,7 @@
     height: 40px;
 }
 .wrap2 img{
-    width: 40px;
+    width: 20px;
     height: 40px;
 }
 
@@ -114,20 +117,20 @@
 }
 .placeholder{
     margin-top: 40px;
-    width: 50vw;
-    height: 5vh;
+    width: 150px;
+    height: 250px;
 }
 .srch{
-    width: 10vw;
-    height: 6vh;
+    width: 100px;
+    height: 50px;
 }
 .account{
-    width: 40px;
+    width: 20px;
     height: 40px;
 }
 .account1{
     margin-top: 35px;
-    width: 40px;
+    width: 25px;
     height: 40px;
 }
 
@@ -139,7 +142,6 @@
 .Body-wrap{
     width: 100vw;
     height: 100vh;
-  
     margin: 0px 100px 200px 100px;
     display: flex;
     justify-content: space-evenly;
@@ -156,13 +158,12 @@
     width: 100vw;
 }
 .products img{
-    height: 150px;
-    width: 300px;
+    height: 200px;
+    width: 250px;
 }
 .products{
-    width: 60vw;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -171,38 +172,37 @@
     height: 40px;
 }
 .description{
-    
-    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    width: 100vw;   
+    width: 100vw;  
 }
 
 .description p{
-    font-size: 16px;
+    font-size: 22px;
     font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .boxes{
     width: 100vw;
-    height: 40vh;
     border-radius: 10px;
     border: 2px solid black;
 }
 .email{
-    margin-top: 50px;
+    width: 100vw;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: rgb(39,43,51);
 }
 .placeholder{
-    width: 500px;
+    width: 400px;
     height: 50px;
     margin-bottom: 20px;
+    border-radius: 2px;
 }
 .em{
     display: flex;
-    flex-direction: column;
+   flex-wrap: wrap;
 }
 .em h3{
     color: aliceblue;
@@ -222,7 +222,7 @@
    
 }
 .upper{
-    margin: 0px 50px 50px 50px;
+    margin: 0px 50px 50px 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -232,7 +232,7 @@
     height: 20vh;
     display: flex;
     justify-content: space-evenly;
-    margin: 50px 0 50px;
+    margin: 10px 0 0px;
 }
 .mid-img{
     height: 140px;
@@ -241,7 +241,7 @@
 
 }
 .lower{
-    margin: 50px 50px 200px 50px;
+    margin: 0px 50px 0px 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
