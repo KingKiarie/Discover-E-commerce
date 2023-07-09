@@ -67,13 +67,13 @@ form.addEventListener('submit', async (e)=>{
 
 })
 
-const fetchProducts = async(products)=>{
-    const response = await fetch ('https://dummyjson.com/products/search?q=${products}')
+const fetchProducts = async()=>{
+   /*Find error in this line*/ const response = await fetch (`https://dummyjson.com/products`)
     const data = await response.json()
 
     data.products.forEach((product)=>{
         
-        const container = document.createAttribute('div')
+        const container = document.createElement('div')
         container.classList.add('containerProduct')
         container.innerHTML=`
         <div class="card" style="width: 18rem;">
@@ -110,12 +110,20 @@ const searchProducts =async (products)=>{
         const container = document.createElement('div')
         container.classList.add('containerProduct')
         container.innerHTML=`
-        <div class="product-image"><img src="${product.thumbnail}"/></div>
-        <h2>${product.title}</h2>
-        <h3>$. ${product.price}</h3>
-        <span>$</span>
-        <p>Quantity: <input type="number" value="1"></p>
-        <button class="cartbutton">Add to cart</button>
+        <div>
+            <div class = "product-card">
+                <div>
+                    <div class="product-image"><img src="${product.thumbnail}"/></div>
+                    <h2>${product.title}</h2>
+                    </div>
+                    <div>
+                    <h3>$. ${product.price}</h3>
+                    <span>$</span>
+                    <p>Quantity: <input type="number" value="1"></p>
+                    <button class="cartbutton">Add to cart</button>
+                </div>
+            </div>
+        </div>
         `
 
         const addButton = container.querySelector('.cartbutton')
@@ -147,6 +155,5 @@ function revealContent(){
 }
 
 revealBtn.addEventListener('click', revealContent)
-
 
 

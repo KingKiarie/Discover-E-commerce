@@ -13,25 +13,26 @@ product.forEach((name,index)=>{
 
 
     cartContainer.innerHTML=`
+    <div class = "cartItem">
         <div><img class="img" src="${name.image}"/></div>
         <h2>${name.title}</h2>
         <h2>${name.price}</h2>
         <button class="remove">Remove from cart</button>
-        
+    </div>
     `
     sum += name.price
 
-total.innerHTML = `Total $${sum}`
+    total.innerHTML = `Total $${sum}`
 
-container.appendChild(cartContainer)
+    container.appendChild(cartContainer)
 
-const remove = container.querySelector('.remove')
+    const remove = container.querySelector('.remove')
 
-remove.addEventListener('click',()=>{
-    product.splice(index,1)
-    localStorage.setItem('cartItem', JSON.stringify(product))
-    window.location.reload();
-})
+    remove.addEventListener('click',()=>{
+        product.splice(index,1)
+        localStorage.setItem('cartItem', JSON.stringify(product))
+        window.location.reload();
+    })
 
 })
 

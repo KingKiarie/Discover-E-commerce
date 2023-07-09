@@ -2,35 +2,57 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 .open{
-    background-image: url(./design1/linkedin_banner_image_2.png);
-    background-size: cover;
+    background-image: url('./design1/facebook_cover_photo_2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: right;
-
+    padding: 10px;
 }
 
 /*animated css*/
 .cart-container {
-    position: relative;
-    width: 300px;
-    height: 200px;
-  }
-  
-  #cart {
-    height: 200px;
-    width: 250px;
+
+    /* position: relative; */
+    /* width: 300px;
+    height: 200px; */
+}
+
+.text p{
+
+        color: rgb(91,48,90);
+        font-size: 40px;
+        font-family:'Abril Fatface', cursive;
+        font-family:'Bebas Neue', sans-serif;
+
+
+}
+
+
+#cart {
+    height: 100px;
+    width: 100px;
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     transition: left 1s linear;
   }
+
+
+.open h1 {
+    color: rgb(91,48,90);
+    font-size: 30px;
+    overflow: hidden;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
   /*outro*/
 .outro{
 
@@ -39,22 +61,7 @@
     flex-direction: column;
    
 }
-.open{
-    background-image: url();
-}
-.open p {
-    color: rgb(91,48,90);
-    font-size: 40px;
-    margin: -600px 300px 0px 900px;
-    font-family: font-family:'Abril Fatface', cursive;
-    font-family:'Bebas Neue', sans-serif;
-}
-.open h1{
-    color: rgb(91,48,90);
-    font-size: 30px;
-    font-family: font-family: 'Abril Fatface', cursive;
-    font-family: 'Bebas Neue', sans-serif;
-}
+
     
 .Head-wrap{
     width: 100vw;
@@ -62,7 +69,15 @@
     background-color: rgb(228,151,86);
 }
 
+.carousel{
+    height: 30vh;
+    width: 0vw;
+}
 
+.Body-wrap{
+    display: flex;
+    flex-wrap:wrap;
+}
 .wrap{
     width: 100vw;
     height: 15vh;
@@ -115,14 +130,17 @@
     width: 200px;
     height: 100px;
 }
-.placeholder{
-    margin-top: 40px;
-    width: 150px;
-    height: 250px;
+#email .placeholder{
+   
+    width: 30vw;
+    height: 10vh;
+    
 }
 .srch{
     width: 100px;
     height: 50px;
+    border-radius: 2px;
+    border:1px solid grey;
 }
 .account{
     width: 20px;
@@ -136,8 +154,9 @@
 
 .futa-wrap{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    margin: 0 20px 0 20px;
 }
 .Body-wrap{
     width: 100vw;
@@ -158,13 +177,46 @@
     width: 100vw;
 }
 .products img{
+    margin: 20px;
     height: 200px;
     width: 250px;
 }
 .products{
+    width: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    background-color: white;
+    padding: 10px;
+}
+.product-card{
+
+    height: 75vh;
+    width: 40vh;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(251, 253, 253);
+    border: 1px solid rgb(168, 159, 159);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-shadow: 0 5px 10px rgba(154,160,185,0.05),0 15px 40px rgba(166,173,201,0.2);
+    
+    h2{
+        font-size: 10px;
+    }
+}
+.cartbutton{
+    border-radius: 3px;
+    text-align: center;
+    background-color: grey;
+    color: white;
+    border: 0;
+}
+.cartbutton:hover{
+    background-color: chocolate;
+    transition: 0.4s ease-in-out;
 }
 
 .dis{
@@ -185,7 +237,7 @@
 .boxes{
     width: 100vw;
     border-radius: 10px;
-    border: 2px solid black;
+    border: 0.2px solid black;
 }
 .email{
     width: 100vw;
@@ -194,10 +246,12 @@
     justify-content: space-evenly;
     background-color: rgb(39,43,51);
 }
-.placeholder{
+.form{
+    margin-top: 50px;
+}
+.form .placeholder{
     width: 400px;
     height: 50px;
-    margin-bottom: 20px;
     border-radius: 2px;
 }
 .em{
@@ -251,6 +305,11 @@
     width: 200px;
     height: 100px;
 
+}
+.sidebar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .sidebar p{
     text-decoration: none;

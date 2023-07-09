@@ -5,7 +5,8 @@
 }
 body{
     background-image: url(./sapiens/sapiens.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
